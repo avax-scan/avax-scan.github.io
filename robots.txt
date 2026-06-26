@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://avax-scan.github.io/sitemap.xml
