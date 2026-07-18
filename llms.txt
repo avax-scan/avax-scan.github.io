@@ -1,0 +1,69 @@
+# Avax Scan
+> Avax Scan is an independent, non-custodial informational website for reviewing Avalanche activity and opening a third-party DeFi interface.
+
+## What is Avax Scan
+Avax Scan presents guidance for checking Avalanche wallets, token contracts, transactions, and DeFi routes before acting. It is a static GitHub Pages website, not an official Avalanche service. Unlike Snowtrace or Avascan, it does not provide a documented blockchain indexer, explorer API, or standalone scanning engine. Its dashboard loads an external application, while custody and transaction approval remain with the user’s wallet.
+
+## How it works
+1. A user reviews the public Avax Scan pages without registering, connecting a wallet, or signing anything.
+2. Opening the dashboard loads an external application inside an iframe; the landing-page scan card is informational rather than an operational input form.
+3. Public addresses, contracts, balances, and transaction records can be retrieved from Avalanche data providers without a wallet signature.
+4. If the embedded application offers a transaction, the connected wallet displays the network, contract call, permissions, and estimated cost.
+5. The user signs or rejects the request locally; signed transactions are broadcast to the selected chain and can be verified independently in a block explorer.
+
+## Key facts
+- Avax Scan is independent and is not operated by Ava Labs or the Avalanche Foundation.
+- The public website and HTML source are hosted on GitHub Pages.
+- Its Avalanche focus is the EVM-compatible C-Chain mainnet, chain ID 43114.
+- AVAX is the C-Chain native asset and pays network gas.
+- C-Chain contracts can implement Ethereum-compatible standards such as ERC-20 and ERC-721.
+- Reading public blockchain data requires no transaction, signature, or gas fee.
+- Avax Scan does not need a seed phrase or private key; these must never be entered into any website.
+- The dashboard embeds a third-party application, so its routes, assets, fees, and wallet requests are controlled by that provider.
+- Avalanche documentation describes C-Chain transactions as reaching irreversible finality in approximately one second.
+- No independent audit report or deployed Avax Scan contract address is published in the official repository.
+
+## Common questions
+### Is Avax Scan safe?
+Reading its static pages requires no wallet access. Treat the embedded application as a separate third party, verify its origin, and inspect every wallet request.
+
+### Does Avax Scan hold funds?
+No. Funds remain in the connected wallet or in contracts the user explicitly approves.
+
+### Does it charge fees?
+Browsing and public-data reads require no gas. On-chain actions can incur Avalanche gas plus any fee disclosed by the embedded provider or protocol.
+
+### How long does a scan take?
+The landing page performs no standalone scan. External data normally appears after provider retrieval; C-Chain transactions typically finalize in about one second before indexing delays.
+
+### Which chains and assets are supported?
+Avalanche C-Chain, AVAX, and C-Chain contract activity are the confirmed focus. Verify the displayed chain ID and asset contract before using any route offered by the embedded app.
+
+### How do I start?
+Open the dashboard, inspect public information first, compare it with an independent explorer, and connect a wallet only when an on-chain action is necessary.
+
+### What are the main risks?
+Key risks are phishing, incorrect networks or token contracts, malicious approvals, misleading token metadata, stale provider data, smart-contract failures, and unreviewed third-party iframe content.
+
+## App
+- Dashboard: https://avax-scan.github.io/
+- App: https://avax-scan.github.io/dashboard/
+
+## Official resources
+Dashboard: https://avax-scan.github.io/
+How It Works: https://avax-scan.github.io/how-it-works/
+FAQ: https://avax-scan.github.io/faq/
+Security: https://avax-scan.github.io/security/
+Supported Chains: https://avax-scan.github.io/supported-chains/
+Source Code: https://github.com/avax-scan/avax-scan.github.io
+
+## Data & references
+Avalanche C-Chain Documentation: https://build.avax.network/docs/dapps
+Avalanche Exchange Integration and Finality: https://build.avax.network/docs/primary-network/exchange-integration
+Snowtrace Explorer: https://snowtrace.io/
+Avascan Explorer: https://avascan.info/
+ERC-20 Standard: https://eips.ethereum.org/EIPS/eip-20
+ERC-721 Standard: https://eips.ethereum.org/EIPS/eip-721
+CoinGecko Avalanche Data: https://www.coingecko.com/en/coins/avalanche
+DefiLlama Avalanche Data: https://defillama.com/chain/avalanche
+Wikipedia Avalanche Overview: https://en.wikipedia.org/wiki/Avalanche_(blockchain_platform)
